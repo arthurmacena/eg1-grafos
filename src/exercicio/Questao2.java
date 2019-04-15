@@ -9,8 +9,32 @@ import org.jgrapht.alg.cycle.PatonCycleBase;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.SimpleGraph;
 
+/**
+ * 
+ * Esta classe tem o objetivo de solucionar o problema dos quarteirões inseparáveis, no qual três
+ * quarteirões vizinhos entre si não podem ser separados em distritos diferentes. Foi-se utilizado
+ * conceitos de teoria dos grafos para solucionar o problema proposto.
+ * 
+ * @author Guilherme de Melo Carneiro
+ * @author Gildo Matos Macedo Neto
+ * @author Tulio Araujo Cunha
+ * @author Mirella Quintans Lyra
+ * @author Jose Nilton Da Silva Lima Junior
+ *
+ */
+
 public class Questao2 {
 
+	/**
+	 * 
+	 * Retorna um ArrayList de GraphPath referentes aos quarteirões que não podem ser separados
+	 * em distritos diferentes a partir de um grafo que considera os quarteirões como vértices e as
+	 * vizinhanças como adjacência do problema.
+	 * 
+	 * @param graph grafo do mapeamento dos quarteirões e de suas vizinhanças, em formato Graph
+	 * @return ArrayList de GraphPath contendo os conjuntos de quarteirões inseparáveis.
+	 */
+	
 	public static ArrayList<GraphPath<String, DefaultEdge>> getQuarteiroesInseparaveis(Graph<String, DefaultEdge> graph){
 		
 		PatonCycleBase<String, DefaultEdge> c = new PatonCycleBase<String, DefaultEdge>(graph);
