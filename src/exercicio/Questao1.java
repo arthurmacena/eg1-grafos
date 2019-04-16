@@ -32,7 +32,7 @@ public class Questao1 {
 	 * @return ArrayList de String contendo as duplas aptas a realizar a missão
 	 */
 	
-	public ArrayList<String> retornaDuplas(Graph<String, DefaultEdge> graph){
+	public static ArrayList<String> retornaDuplas(Graph<String, DefaultEdge> graph){
 		
 		ArrayList<String> duplas = new ArrayList<String>();
 		
@@ -68,7 +68,7 @@ public class Questao1 {
 		graph.addEdge("Mario", "Mia");
 		graph.addEdge("Uri", "Sue");
 		
-		ArrayList<String> duplas = new ArrayList<String>();
+		ArrayList<String> duplas = retornaDuplas(graph);
 		
 		System.out.println("Duplas de nacionalidades diferentes: ");
 		for(String dupla: duplas) {
